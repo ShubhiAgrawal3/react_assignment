@@ -21,6 +21,7 @@ function handleSubmit(e){
         localStorage.setItem("Email",JSON.stringify(email)); 
         localStorage.setItem("Password",JSON.stringify(password)); 
         setLogin(!logIn);
+        console.log("User registered successfully");
     }
 
 }
@@ -31,15 +32,15 @@ function handleSubmit(e){
 
 
   return (
-    <div>
+    <div className='main'>
         {" "}
           {logIn ? (
         <form onSubmit={handleSubmit}>
-            <h1>User Registration</h1>
+            <h2>USER REGISTRATION</h2>
             <div className='form-group p-2'>
                 <label>Name</label>
                 <input type="text"
-                className='form-control '
+                className='form-control p-2 mt-2'
                 placeholder='Enter your name'
                 onChange={(event) => setName(event.target.value)}
                 ></input>
@@ -47,7 +48,7 @@ function handleSubmit(e){
             <div className='form-group p-2'>
                 <label>Email:</label>
                 <input type="text"
-                className='form-control '
+                className='form-control p-2 mt-2'
                 placeholder='Enter your email'
                 onChange={(event) => setEmail(event.target.value)}
                 ></input>
@@ -55,12 +56,13 @@ function handleSubmit(e){
             <div className='form-group p-2'>
                 <label>Password</label>
                 <input type="password"
-                className='form-control '
+                className='form-control p-2 mt-2'
                 placeholder='Enter your password'
                 onChange={(event) => setPassword(event.target.value)}
                 ></input>
             </div>
-            <button type='submit' className='btn btn-dark btn-block'>Register Me!</button>
+            <button type='submit' className='submit btn m-3 text-light'>Register Me!</button>
+            <h4></h4>
             <p>Already have an account? {" "}<span className='text-info' onClick={handleClick}>Log in</span> </p>
 
             {flag && (
@@ -77,6 +79,7 @@ function handleSubmit(e){
                 )}
 
     </div>
+    
   );
 }
 

@@ -1,21 +1,21 @@
-import logo from './logo.svg';
 import './App.css';
-import Registration from './components/Registration';
+import { useState } from 'react'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import Details from './components/Details';
+import Header from './components/Header'
+import Mcq from './components/Mcq'
 import '../node_modules/bootstrap/dist/css/bootstrap.css';
-import LogIn from './components/Login';
+import Registration from './components/Registration';
 
 function App() {
+  
+
   return (
     <div className="App">
-      <div className='outer'>
-        <div className='inner'>
-        <Registration></Registration>
-    
-        </div>
-      </div>
+      <Registration/>
       
     </div>
   );
 }
- 
+
 export default App;
